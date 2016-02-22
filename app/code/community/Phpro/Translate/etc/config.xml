@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Phpro_Translate>
-            <version>1.1.3</version>
+            <version>1.1.4</version>
         </Phpro_Translate>
     </modules>
     <phpunit>
@@ -118,13 +118,11 @@
     </adminhtml>
     <admin>
         <routers>
-            <translate>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <module>Phpro_Translate</module>
-                    <frontName>translate</frontName>
+                    <Phpro_Translate after="Mage_Adminhtml">Phpro_Translate_Adminhtml</Phpro_Translate>
                 </args>
-            </translate>
+            </adminhtml>
         </routers>
     </admin>
 </config>
